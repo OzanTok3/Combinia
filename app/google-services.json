@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "325608284317",
+    "project_id": "combinia-ozantok",
+    "storage_bucket": "combinia-ozantok.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:325608284317:android:b2985dd53f8b2296853474",
+        "android_client_info": {
+          "package_name": "com.ozantok.combinia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "325608284317-57qilsj5lolrgf1erg6spdqimdlnhnub.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ozantok.combinia",
+            "certificate_hash": "c3a39becaf0c35647b42a3a2a32eb569914d855f"
+          }
+        },
+        {
+          "client_id": "325608284317-n8ftet5hs8fkt4vvqmnm27sj7htnndhv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgz-WIRfAOEAGAkOxvU38-UDKHDlK7ZiU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "325608284317-n8ftet5hs8fkt4vvqmnm27sj7htnndhv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
