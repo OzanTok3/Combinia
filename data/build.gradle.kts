@@ -41,6 +41,7 @@ dependencies {
     implementation("com.google.firebase:firebase-auth-ktx:22.3.1")
     implementation("com.google.dagger:hilt-android:2.48")
     kapt("com.google.dagger:hilt-android-compiler:2.48")
-
+    // Firestore
+    implementation("com.google.firebase:firebase-firestore-ktx:24.10.2")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.7.3")
 }

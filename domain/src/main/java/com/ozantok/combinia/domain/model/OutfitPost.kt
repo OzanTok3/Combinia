@@ -1,10 +1,13 @@
 package com.ozantok.combinia.domain.model
 
+
 data class OutfitPost(
-    val id: String,
+    val postId: String,
     val userId: String,
-    val imageUrls: List<String>,
+    val username: String,
+    val userProfileUrl: String,
+    val outfitImageUrl: String,
     val description: String,
-    val tags: List<String>,
-    val timestamp: Long
+    val likedBy: List<String> = emptyList(),
+    val favoritedBy: List<String> = emptyList()
 )
