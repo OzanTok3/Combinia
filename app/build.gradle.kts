@@ -63,8 +63,11 @@ dependencies {
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
+    implementation("androidx.compose.material3:material3:1.2.1")
+    implementation("com.google.android.material:material:1.11.0")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+    implementation("androidx.appcompat:appcompat:1.6.1")
 
     implementation("androidx.compose.compiler:compiler:1.5.8") // Kotlin 1.9.22 ile uyumlu
 
@@ -75,6 +78,7 @@ dependencies {
     implementation("com.google.firebase:firebase-firestore-ktx")
     implementation("com.google.firebase:firebase-storage-ktx")
     implementation("com.google.firebase:firebase-messaging-ktx")
+    implementation("com.google.android.gms:play-services-auth:20.7.0")
 
     // Hilt
     implementation("com.google.dagger:hilt-android:2.50")
@@ -102,6 +106,11 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     androidTestImplementation(composeBom)
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
+    implementation("com.google.accompanist:accompanist-systemuicontroller:0.30.1")
+
+    implementation(project(":domain"))
+    implementation(project(":core"))
+    implementation(project(":data"))
 }
 
 kapt {

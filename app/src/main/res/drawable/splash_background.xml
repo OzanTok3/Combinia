@@ -1,0 +1,14 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Arka plan rengi -->
+    <item android:drawable="@android:color/white" />
+
+    <!-- Ortalanmış ve büyütülmüş logo -->
+    <item>
+        <inset
+            android:insetLeft="8dp"
+            android:insetRight="8dp"
+            android:insetTop="20dp"
+            android:insetBottom="20dp"
+            android:drawable="@drawable/ic_combinia_logo" />
+    </item>
+</layer-list>
