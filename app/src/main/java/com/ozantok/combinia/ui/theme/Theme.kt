@@ -19,9 +19,9 @@ fun CombiniaTheme(content: @Composable () -> Unit) {
     MaterialTheme(
         colorScheme = lightColorScheme(
             primary = AccentColor,
-            background = BackgroundColor,
-            surface = SurfaceColor,
-            onPrimary = Color.White,
+            background = NearlyWhite,
+            surface = NearlyWhite,
+            onPrimary = NearlyWhite,
             onBackground = PrimaryTextColor,
         ),
         typography = Typography,

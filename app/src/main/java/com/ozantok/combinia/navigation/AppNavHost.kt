@@ -32,28 +32,6 @@ fun AppNavHost(
 ) {
     val authViewModel: AuthViewModel = hiltViewModel()
     val authState = authViewModel.uiState.collectAsState().value
-    val context = LocalContext.current
-    val preferencesManager = remember { PreferencesManager(context) }
-    val onboardingCompleted = remember { preferencesManager.isOnboardingShown() }
-    val isLoggedIn = remember { FirebaseAuth.getInstance().currentUser != null }
-
-    var didRedirect by remember { mutableStateOf(false) }
-
-    LaunchedEffect(Unit) {
-        if (!didRedirect) {
-            val target = when {
-                !onboardingCompleted -> Screen.Onboarding.route
-                isLoggedIn || authState.isSuccess -> Screen.Home.route
-                else -> Screen.Login.route
-            }
-
-            navController.navigate(target) {
-                popUpTo(0)
-                launchSingleTop = true
-            }
-            didRedirect = true
-        }
-    }
 
     NavHost(
         navController = navController,
@@ -85,14 +63,23 @@ fun AppNavHost(
         }
 
         composable(Screen.Home.route) {
-            HomeScreen()
+            if (FirebaseAuth.getInstance().currentUser == null) {
+                LaunchedEffect(Unit) {
+                    navController.navigate(Screen.Login.route) {
+                        popUpTo(0) { inclusive = true }
+                    }
+                }
+            } else {
+                HomeScreen()
+            }
         }
 
         composable(Screen.Search.route) { SearchScreen() }
         composable(Screen.Share.route) { ShareScreen() }
         composable(Screen.Favorites.route) { FavoritesScreen() }
-        composable(Screen.Profile.route) { ProfileScreen() }
-
+        composable(Screen.Profile.route) {
+            ProfileScreen(navController = navController)
+        }
         composable(Screen.Onboarding.route) {
             OnboardingScreen(navController)
         }

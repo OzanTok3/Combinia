@@ -9,6 +9,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="nearly_white">#FFFEF4DF</color>
     <color name="beige">#FFF3C894</color>
+    <color name="beige_70">#B3F3C894</color>
     <color name="dark_beige">#FFAC885A</color>
     <color name="light_beige">#FFFFF9E5</color>
+    <color name="light_beige2">#FFF3C8A3</color>
 </resources>

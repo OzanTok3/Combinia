@@ -3,6 +3,7 @@ package com.ozantok.combinia.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.google.firebase.auth.FirebaseAuth
 import com.ozantok.combinia.domain.repository.AuthRepository
 import com.ozantok.combinia.domain.usecase.SignInUseCase
 import com.ozantok.combinia.domain.usecase.SignUpUseCase
@@ -65,6 +66,11 @@ class AuthViewModel @Inject constructor(
             val result = repository.resetPassword(email)
             onResult(result.isSuccess, result.exceptionOrNull()?.message)
         }
+    }
+
+    fun logout() {
+        FirebaseAuth.getInstance().signOut()
+        _uiState.value = AuthUiState()
     }
 
 }
